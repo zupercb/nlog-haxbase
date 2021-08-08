@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5D37B5B-4D38-432D-BD92-A6A661F9377A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NLog_CheatBase</RootNamespace>
+    <AssemblyName>NLog.Cheat.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>shared\libraries\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Comfort">
+      <HintPath>shared\libraries\Comfort.dll</HintPath>
+    </Reference>
+    <Reference Include="Comfort.Unity">
+      <HintPath>shared\libraries\Comfort.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Diz.Binding">
+      <HintPath>shared\libraries\Diz.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Diz.Jobs">
+      <HintPath>shared\libraries\Diz.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>shared\libraries\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>shared\libraries\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>shared\libraries\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>shared\libraries\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>shared\libraries\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>shared\libraries\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\CorpseESP.cs" />
+    <Compile Include="Features\ExfilESP.cs" />
+    <Compile Include="Features\FreeCam.cs" />
+    <Compile Include="Features\ItemESP.cs" />
+    <Compile Include="Features\PlayerESP.cs" />
+    <Compile Include="Features\ThrowableESP.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Tools\DrawSystem.cs" />
+    <Compile Include="Tools\GameWorld.cs" />
+    <Compile Include="Tools\Player\Bones.cs" />
+    <Compile Include="Tools\ScreenCalc.cs" />
+    <Compile Include="Tools\Structures\CorpseStruct.cs" />
+    <Compile Include="Tools\Structures\ESPBase.cs" />
+    <Compile Include="Instance.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="NLogHook.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Structures\ExfiltrationStruct.cs" />
+    <Compile Include="Tools\Structures\ItemStruct.cs" />
+    <Compile Include="Tools\Structures\PlayerStruct.cs" />
+    <Compile Include="Tools\Structures\ThrowableStruct.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
